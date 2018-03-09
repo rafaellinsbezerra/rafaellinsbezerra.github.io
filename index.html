@@ -1,15 +1,17 @@
 <style>
   .header{
-    text-align : center;
-    border     : 1px solid black;
+    width         : 100%;
+    text-align    : left;
+    border        : 1px solid black;
+    vertical-align: center;
   }
-  .side_bar_left{
+/*   .side_bar_left{
     border       : 1px solid black;
     width        : 15%;
     padding-left : 10px;
     padding-right : 10px;
     vertical-align: top;
-  }
+  } */
   .context{
     border : 1px solid black;
     width  : 60%;
@@ -50,22 +52,19 @@
     <meta name="description" content="Projeto de Desenvolvimento">
   </head>
   <body>
-    <div class="header">
-      <span width="100%"><img  src="../image/user.jpg" alt="User image" height="80" width="70"></span>
-      <h1 style="margin-top: -5px">Rafael Lins Bezerra</h1>
-    </div>
+    <table class="header">
+      <th>
+        <td><img  src="image/user.jpg" alt="User image" width="70%"></td>
+        <td><h1 style="margin-left: -60px;">Rafael Lins Bezerra</h1></td>
+        <td><a style="padding-left: 20px;" href="javascript:alert('Hello');">Home</a></td>
+        <td><a style="padding-left: 20px;" href="javascript:alert('Hello');">Quem Sou?</a></td>
+        <td><a style="padding-left: 20px;" href="javascript:alert('Hello');">Experiência Profissional</a></td>
+        <td><a style="padding-left: 20px;" href="javascript:alert('Hello');">Galeria</a></td>
+      </th>
+    </table>
     <div class="container">
       <table width="100%">
         <tr>
-          <td class="side_bar_left">
-            <h4>Menu:</h4>
-            <ul style="width:100%; list-style-type:circle; margin-left: -15px;">
-              <li><a href="javascript:alert('Hello');">Home</a></li>
-              <li><a href="javascript:alert('Hello');">Quem Sou?</a></li>
-              <li><a href="javascript:alert('Hello');">Experiência Profissional</a></li>
-              <li><a href="javascript:alert('Hello');">Galeria</a></li>
-            </ul>
-          </td>
           <td class="context">
             <h4>Conteudo:</h4>
           </td>
