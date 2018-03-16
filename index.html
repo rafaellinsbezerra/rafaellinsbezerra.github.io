@@ -72,15 +72,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <audio id="myAudio" style="align: right; float: right;" controls><source src="audio/10.mp3" type="audio/mpeg"></audio>
+    <audio id="myAudio" style="float: right;" controls autoplay><source src="audio/04.mp3"></audio>
     <table class="header">
       <tr>      
-        <td width="10%"><img  src="image/IMG_8104.jpg" alt="User image" width="100%" style="border-radius: 25%;"></td>
+        <td width="10%"><img  src="image/foto.jpg" alt="User image" width="100%" style="border-radius: 50%;"></td>
         <td width="10%"><h1 style="text-align: left; font-size: 3vw; margin-right: 20px;">Rafael&nbsp;Lins&nbsp;Bezerra</h1></td>
-        <td width="20%" class="header_buttom" style="border: 1px solid black; font-size: 1vw;"><a href="javascript:alert('Hello');">Home</a></td>
-        <td width="20%" class="header_buttom" style="border: 1px solid black; font-size: 1vw;"><a href="javascript:alert('Hello');">Quem Sou?</a></td>
-        <td width="20%" class="header_buttom" style="border: 1px solid black; font-size: 1vw;"><a href="javascript:alert('Hello');">O Que Já fiz?</a></td>
-        <td width="20%" class="header_buttom" style="border: 1px solid black; font-size: 1vw;"><a href="javascript:alert('Hello');">Galeria</a></td>
+        <td width="15%" class="header_buttom" style="border: 1px solid black; font-size: 1.2vw;"><a href="javascript:alert('Hello');">Home</a></td>
+        <td width="15%" class="header_buttom" style="border: 1px solid black; font-size: 1.2vw;"><a href="javascript:alert('Hello');">Quem Sou?</a></td>
+        <td width="15%" class="header_buttom" style="border: 1px solid black; font-size: 1.2vw;"><a href="javascript:alert('Hello');">O Que Já fiz?</a></td>
+        <td width="15%" class="header_buttom" style="border: 1px solid black; font-size: 1.2vw;"><a href="javascript:alert('Hello');">Galeria</a></td>
+        <td width="20%">&nbsp;</td>
       </tr>
     </table>
     <div class="container">
@@ -143,9 +144,6 @@
 
 <script>
   //Alterações no Audio inicial
-  var vid = document.getElementById("myAudio");
-  //vid.play(); 
-  vid.volume = 0.5;
-  vid.currentTime = 22;
-  
+  var aud = document.getElementById("myAudio");
+  aud.volume = 0.2;
 </script>
