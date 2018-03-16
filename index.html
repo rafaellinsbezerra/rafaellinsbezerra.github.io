@@ -42,6 +42,22 @@
     color: green;
     text-decoration: underline;
   }
+  .header_buttom:link {
+    color: black;  
+    text-decoration: none;
+  }
+  .header_buttom:visited {
+    color: blue;
+    text-decoration: none;
+  }
+  .header_buttom:hover {
+    color: red;
+    text-decoration: none;
+  }
+  .header_buttom:active {
+    color: green;
+    text-decoration: underline;
+  }
 </style>
 
 <html>
@@ -50,19 +66,21 @@
     <meta charset="UTF-8">
     <meta name="author" content="Rafael Lins">
     <meta name="description" content="Projeto de Desenvolvimento">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
+    <audio id="myAudio" style="align: right; float: right;" controls><source src="audio/10.mp3" type="audio/mpeg"></audio>
     <table class="header">
-      <tr>
-        <td width="5%"><img  src="image/user.jpg" alt="User image" height="100%"></td>
-        <td width="5%"><h1 style="text-align: left;">Rafael&nbsp;Lins&nbsp;Bezerra</h1></td>
-        <td><a style="padding-left: 20px;" href="javascript:alert('Hello');">Home</a></td>
-        <td><a style="padding-left: 20px;" href="javascript:alert('Hello');">Quem Sou?</a></td>
-        <td><a style="padding-left: 20px;" href="javascript:alert('Hello');">Experiência Profissional</a></td>
-        <td><a style="padding-left: 20px;" href="javascript:alert('Hello');">Galeria</a></td>
+      <tr>      
+        <td width="10%"><img  src="image/IMG_8104.jpg" alt="User image" width="100%" style="border-radius: 25%;"></td>
+        <td width="10%"><h1 style="text-align: left; font-size: 3vw; margin-right: 20px;">Rafael&nbsp;Lins&nbsp;Bezerra</h1></td>
+        <td width="20%" class="header_buttom" style="border: 1px solid black; font-size: 1vw;"><a href="javascript:alert('Hello');">Home</a></td>
+        <td width="20%" class="header_buttom" style="border: 1px solid black; font-size: 1vw;"><a href="javascript:alert('Hello');">Quem Sou?</a></td>
+        <td width="20%" class="header_buttom" style="border: 1px solid black; font-size: 1vw;"><a href="javascript:alert('Hello');">O Que Já fiz?</a></td>
+        <td width="20%" class="header_buttom" style="border: 1px solid black; font-size: 1vw;"><a href="javascript:alert('Hello');">Galeria</a></td>
       </tr>
     </table>
     <div class="container">
@@ -70,6 +88,7 @@
         <tr>
           <td class="context">
             <h4>Conteudo:</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6Qd3NsUc8Dg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </td>
           <td class="side_bar_right">
             <h4>Links Relacionados:</h4>
@@ -123,5 +142,10 @@
 </html>
 
 <script>
+  //Alterações no Audio inicial
+  var vid = document.getElementById("myAudio");
+  //vid.play(); 
+  vid.volume = 0.5;
+  vid.currentTime = 22;
   
 </script>
