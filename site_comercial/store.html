@@ -16,6 +16,19 @@
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link href="../vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="../vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    
+    <!-- JQuery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#datepicker" ).datepicker();
+      } );
+    </script>
 
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
@@ -63,75 +76,57 @@
           <div class="col-xl-9 mx-auto">
             <div class="cta-inner text-center rounded">
               <h2 class="section-heading mb-5">
-                <span class="section-heading-upper">Come On In</span>
-                <span class="section-heading-lower">We're Open</span>
+                <span class="section-heading-upper">venha</span>
+                <span class="section-heading-lower">fale conosco</span>
               </h2>
-              <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Sunday
-                  <span class="ml-auto">Closed</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Monday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Tuesday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Wednesday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Thursday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Friday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Saturday
-                  <span class="ml-auto">9:00 AM to 5:00 PM</span>
-                </li>
-              </ul>
-              <p class="address mb-5">
-                <em>
-                  <strong>1116 Orchard Street</strong>
-                  <br>
-                  Golden Valley, Minnesota
-                </em>
-              </p>
+              <form action="form/salvar_contato.php">
+                <div class="form-group row">
+                  <label for="inputName" class="col-sm-3 col-form-label">Nome</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputName" placeholder="Nome completo">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail" class="col-sm-3 col-form-label">E-mail</label>
+                  <div class="col-sm-9">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="datepicker" class="col-sm-3 col-form-label">Data do Evento</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="datepicker">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputText" class="col-sm-12 col-form-label">Como podemos tornar seu sonho realidade</label>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12 ">
+                    <textarea id="inputText" class="form-control" placeholder="text" rows="5"></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="fileImage" class="col-sm-3 col-form-label">Ideia Base</label>
+                  <div class="col-sm-9">
+                    <input type="file" class="form-control form-control-file" id="fileImage">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+
               <p class="mb-0">
                 <small>
-                  <em>Call Anytime</em>
+                  <em>Telefone para contato</em>
                 </small>
                 <br>
-                (317) 585-8468
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                (84) 99911-3742
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section about-heading">
-      <div class="container">
-        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
-        <div class="about-heading-content">
-          <div class="row">
-            <div class="col-xl-9 col-lg-10 mx-auto">
-              <div class="bg-faded rounded p-5">
-                <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
-                  <span class="section-heading-lower">About Our Cafe</span>
-                </h2>
-                <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-                <p class="mb-0">We guarantee that you will fall in
-                  <em>lust</em>
-                  with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</p>
-              </div>
             </div>
           </div>
         </div>
