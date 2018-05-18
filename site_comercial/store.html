@@ -87,15 +87,21 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputEmail" class="col-sm-3 col-form-label">E-mail</label>
+                  <label for="inputFone" class="col-sm-3 col-form-label">Telefone</label>
                   <div class="col-sm-9">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com">
+                    <input type="text" class="form-control" id="inputFone" data-mask="999-99-999-9999-9" placeholder="(99) 9 9999-9999">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="datepicker" class="col-sm-3 col-form-label">Data do Evento</label>
+                  <label for="inputEmail" class="col-sm-3 col-form-label">E-mail</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="datepicker">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="email@example.com">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputDate" class="col-sm-3 col-form-label">Data do Evento</label>
+                  <div class="col-sm-9">
+                    <input type="date" class="form-control" id="inputDate">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -107,7 +113,7 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="fileImage" class="col-sm-3 col-form-label">Ideia Base</label>
+                  <label for="fileImage" class="col-sm-3 col-form-label">Foto Base</label>
                   <div class="col-sm-9">
                     <input type="file" class="form-control form-control-file" id="fileImage">
                   </div>
@@ -148,6 +154,26 @@
   <!-- Script to highlight the active date in the hours list -->
   <script>
     $('.list-hours li').eq(new Date().getDay()).addClass('today');
+    
+    function submit() {
+        var event = {
+          name: $("#inputName").val(),
+          fone: $("#inputFone").val(),
+          email:$("#id-address").val(),
+          data:$("#id-phone").val(),
+          data:$("#id-phone").val()
+        }
+        
+        $.ajax({
+          url: '/test/PersonSubmit',
+          type: 'post',
+          dataType: 'json',
+          success: function (data) {
+              $('#target').html(data.msg);
+          },
+          data: event
+        });
+    }
   </script>
 
 </html>
