@@ -54,11 +54,11 @@
                     <div class="device-container">
                         <div class="device-mockup iphone6_plus portrait white">
                             <div class="device">
-                                <div class="screen">
+                                <div class="screen" id="tela_celular">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+                                    <img src="img/demo-screen-1.png" class="img-fluid" alt="">
                                 </div>
-                                <div class="button">
+                                <div class="button" onclick="about_button()">
                                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
                                 </div>
                             </div>
@@ -110,6 +110,19 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/new-age.min.js"></script>
+
+    <script>
+        var a = 1;
+
+        function about_button() {
+            if ((a % 2) == 1) {
+                document.getElementById("tela_celular").innerHTML = "<img src='img/teste.png' class='img-fluid' alt=''>";
+            } else {
+                document.getElementById("tela_celular").innerHTML = "<img src='img/demo-screen-1.png' class='img-fluid' alt=''>";
+            }
+            a = a + 1;
+        }
+    </script>
 
 </body>
 
